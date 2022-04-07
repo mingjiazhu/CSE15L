@@ -10,7 +10,7 @@ Download VSCode for Mac and install it. The screenshot below shows the interface
 
 First, install OpenSSH, lookup for CSE15L account and change the password of it. Then type in "ssh _<CSE15L-username>_@ieng6.ucsd.edu" in terminal and enter password. 
 <br/><br/>
-<img src="remote_connect.png" width="500" />
+<img src="remote_connection.png" width="500" />
 
 ### Trying Some Commands
 
