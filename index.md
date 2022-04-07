@@ -40,6 +40,7 @@ Then we will be able to "ssh" or "scp" without a password.
 ### Optimizing Remote Running
 
 Run "javac WhereAmI.java; java WhereAmI". Then run "scp WhereAmI.java cs15lsp22adv@ieng6.ucsd.edu:~/"
+<br/><br/>
 <img src="optimize.png" width="500" />
 
 
