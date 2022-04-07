@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Installing VSCode
 
-![install vscode](install_vscode.png)
+<img src="install_vscode.png" width="200" />
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
