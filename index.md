@@ -1,39 +1,37 @@
 ## Week 2 Lab Report
 
-You can use the [editor on GitHub](https://github.com/mingjiazhu/CSE15L/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### Installing VSCode
 
+Download VSCode for Mac and install it. The screenshot below shows the interface of VSCode after opening it.
 <img src="install_vscode.png" width="500" />
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Remotely Connecting
 
-```markdown
-Syntax highlighted code block
+First, install OpenSSH, lookup for CSE15L account and change the password of it. Then type in "ssh _<CSE15L-username>_@ieng6.ucsd.edu" in terminal and enter password. 
+<img src="remote_connect.png" width="500" />
 
-# Header 1
-## Header 2
-### Header 3
+### Trying Some Commands
 
-- Bulleted
-- List
+Try "ls" and "cd" commands. "ls" command gives us a list of subdirectories in the current directories; "cd" command change the directory.
+<img src="try_commands.png" width="500" />
 
-1. Numbered
-2. List
+### Moving Files with scp
 
-**Bold** and _Italic_ and `Code` text
+Create a file on local computer (eg. WhereAmI.java). Run it using javac and java. Then, run "scp _<filename>_ _<CSE15L-username>_@ieng6.ucsd.edu:~/" command and enter the password. Then we could see the file on remote server.
+<img src="move_file_scp_1.png" width="500" />
+<img src="move_file_scp_2.png" width="500" />
 
-[Link](url) and ![Image](src)
-```
+### Setting an SSH Key
+  
+Run "ssh-keygen" on local computer. 
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa): /Users/<user-name>/.ssh/id_rsa
+Don't enter passphrase at this step.
+Then on server, run "mkdir .ssh".
+On local computer, run "scp /Users/<user-name>/.ssh/id_rsa.pub _<CSE15L-username>_@ieng6.ucsd.edu:~/.ssh/authorized_keys"
+Then we will be able to "ssh" or "scp" without a password.
+<img src="ssh_key.png" width="500" />
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mingjiazhu/CSE15L/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+  
